@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0F6B5C">
+<title>Yêu cầu xoá dữ liệu — Ăn gì hôm nay</title>
+<meta name="description" content="Cách xoá tài khoản và toàn bộ dữ liệu của bạn khỏi ứng dụng Ăn gì hôm nay, ngay trong ứng dụng hoặc bằng một yêu cầu qua email.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/legal.css">
+</head>
+<body>
+
+<main class="doc">
+
+  <header>
+    <a class="back" href="https://angihomnay-frontend.vercel.app/">← Về ứng dụng</a>
+    <h1>Yêu cầu xoá dữ liệu</h1>
+    <p class="updated">Ứng dụng <strong>Ăn gì hôm nay</strong> · nhà phát triển: truklab<br>
+    Cập nhật ngày 7 tháng 9 năm 2026.</p>
+  </header>
+
+  <div class="summary">
+    <h3>Nhanh nhất</h3>
+    <p>Mở ứng dụng → <strong>Cài đặt</strong> → <strong>Dữ liệu của bạn</strong> → <strong>Xoá tài khoản và toàn bộ dữ liệu</strong>. Dữ liệu được xoá ngay, không cần chờ ai xử lý.</p>
+    <p>Nếu bạn đã xoá ứng dụng khỏi máy, hãy dùng cách gửi yêu cầu qua email bên dưới.</p>
+  </div>
+
+  <h2>Cách 1 — Xoá ngay trong ứng dụng</h2>
+
+  <ul>
+    <li>Mở <strong>Ăn gì hôm nay</strong> và đăng nhập nếu cần.</li>
+    <li>Vào <strong>Cài đặt</strong>, tới phần <strong>Dữ liệu của bạn</strong>.</li>
+    <li>Chọn <strong>Xoá tài khoản và toàn bộ dữ liệu</strong> và xác nhận.</li>
+  </ul>
+
+  <p>Việc xoá diễn ra ngay lập tức. Ứng dụng sẽ đưa bạn về màn hình đăng nhập vì tài khoản không còn tồn tại.</p>
+
+  <p>Nếu bạn muốn giữ lại bản sao dữ liệu của mình, hãy làm việc đó <em>trước khi</em> xoá: trên web dùng nút <strong>Tải toàn bộ dữ liệu (JSON)</strong>, trên di động dùng nút <strong>Copy toàn bộ dữ liệu</strong>. Sau khi xoá thì không lấy lại được nữa.</p>
+
+  <h2>Cách 2 — Gửi yêu cầu qua email</h2>
+
+  <p>Cách này dành cho trường hợp bạn không còn cài ứng dụng hoặc không đăng nhập được.</p>
+
+  <p>Gửi email tới <a href="mailto:truklab.help@gmail.com?subject=Y%C3%AAu%20c%E1%BA%A7u%20xo%C3%A1%20d%E1%BB%AF%20li%E1%BB%87u">truklab.help@gmail.com</a> với:</p>
+
+  <ul>
+    <li>Tiêu đề: <strong>Yêu cầu xoá dữ liệu</strong></li>
+    <li><strong>Số điện thoại</strong> bạn đã dùng để đăng nhập — đây là thông tin duy nhất giúp chúng tôi tìm đúng tài khoản của bạn.</li>
+  </ul>
+
+  <p>Chúng tôi xử lý trong vòng <strong>30 ngày</strong> và trả lời khi đã xoá xong. Chúng tôi có thể cần xác minh rằng bạn là chủ số điện thoại đó trước khi xoá, để không ai xoá được tài khoản của người khác.</p>
+
+  <h2>Những gì được xoá</h2>
+
+  <p>Toàn bộ dữ liệu thuộc về tài khoản của bạn, không giữ lại phần nào:</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Nhóm dữ liệu</th><th>Gồm những gì</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Tài khoản</td><td>Số điện thoại, mục tiêu calo, món không ăn được, số người nấu cho, múi giờ</td></tr>
+      <tr><td>Nhật ký bữa ăn</td><td>Mọi bữa đã ghi, kèm calo, đạm và thời điểm</td></tr>
+      <tr><td>Trạng thái theo ngày</td><td>Số liệu cộng dồn của từng ngày</td></tr>
+      <tr><td>Ràng buộc</td><td>Các giới hạn đã lưu cho tài khoản</td></tr>
+      <tr><td>Lịch sử gọi mô hình</td><td>Số đếm dùng để giới hạn số lần gọi AI mỗi ngày</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note">
+    <p><strong>Phần bạn viết về sức khỏe không cần xoá, vì nó chưa từng được lưu.</strong> Câu trả lời cho “Có gì về sức khỏe mình nên biết không?” chỉ được đọc một lần trong bộ nhớ để kiểm tra an toàn rồi bỏ đi. Chi tiết ở <a href="/privacy/">chính sách bảo mật</a>, mục 2.</p>
+  </div>
+
+  <h2>Sau khi xoá</h2>
+
+  <ul>
+    <li>Việc xoá là <strong>vĩnh viễn</strong>. Chúng tôi không giữ bản sao để phục hồi tài khoản.</li>
+    <li>Bạn vẫn có thể tạo tài khoản mới bằng cùng số điện thoại đó, nhưng sẽ bắt đầu lại từ đầu, không có dữ liệu cũ.</li>
+    <li>Xoá tài khoản không tự động xoá ứng dụng khỏi máy. Bạn tự xoá ứng dụng như bình thường nếu muốn.</li>
+  </ul>
+
+  <footer>
+    <p>Ăn gì hôm nay · <a href="https://angihomnay-frontend.vercel.app/">Ứng dụng</a> · <a href="/privacy/">Chính sách bảo mật</a></p>
+  </footer>
+
+</main>
+
+</body>
+</html>

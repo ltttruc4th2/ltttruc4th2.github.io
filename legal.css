@@ -1,0 +1,138 @@
+/* Ăn gì hôm nay — legal pages on GitHub Pages.
+   Self-contained: the tokens, base and type rules are copied from the
+   app's styles.css so these pages do not depend on the app being up. */
+
+:root {
+  --ground: #FBFBF9;
+  --surface: #FFFFFF;
+  --surface-2: #F1F3EF;
+  --ink: #17211F;
+  --ink-soft: #3D4B47;
+  --ink-mute: #6B7772;
+  --rule: #DFE3DC;
+  --accent: #0F6B5C;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #E4F0EC;
+  --warn: #96660D;
+  --warn-soft: #FBF3E2;
+  --danger: #A8322A;
+  --danger-soft: #F9EBE9;
+  --radius: 12px;
+  --f: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #101615;
+    --surface: #18201F;
+    --surface-2: #202A28;
+    --ink: #E7EDEA;
+    --ink-soft: #B4C0BB;
+    --ink-mute: #86928D;
+    --rule: #2B3634;
+    --accent: #4FBFA8;
+    --accent-ink: #0B1413;
+    --accent-soft: #15302B;
+    --warn: #D9A945;
+    --warn-soft: #2A2214;
+    --danger: #E48C82;
+    --danger-soft: #2E1B19;
+  }
+}
+
+:root[data-theme="dark"] {
+  --ground: #101615;
+  --surface: #18201F;
+  --surface-2: #202A28;
+  --ink: #E7EDEA;
+  --ink-soft: #B4C0BB;
+  --ink-mute: #86928D;
+  --rule: #2B3634;
+  --accent: #4FBFA8;
+  --accent-ink: #0B1413;
+  --accent-soft: #15302B;
+  --warn: #D9A945;
+  --warn-soft: #2A2214;
+  --danger: #E48C82;
+  --danger-soft: #2E1B19;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--f);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1 { font-size: 1.9rem; line-height: 1.15; margin: 0 0 .5rem; letter-spacing: -.02em; }
+h2 { font-size: 1.28rem; line-height: 1.25; margin: 0 0 .35rem; letter-spacing: -.01em; }
+h3 { font-size: 1rem; margin: 0 0 .5rem; }
+p  { margin: 0 0 .75rem; }
+
+/* Layout for the standalone legal pages (/privacy, /data-deletion).
+   Tokens, type and dark mode all come from styles.css; this only adds the
+   reading column and the few prose elements the app itself never needed. */
+
+.doc {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 2rem 1.15rem calc(3rem + env(safe-area-inset-bottom));
+}
+
+.doc header { border-bottom: 1px solid var(--rule); padding-bottom: 1.1rem; margin-bottom: 1.6rem; }
+.doc .back { display: inline-block; font-size: .87rem; color: var(--accent); text-decoration: none; margin-bottom: 1rem; }
+.doc .back:hover { text-decoration: underline; }
+.doc .updated { color: var(--ink-mute); font-size: .87rem; margin: 0; }
+
+.doc h2 {
+  margin: 2.1rem 0 .6rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--rule);
+}
+.doc h2:first-of-type { border-top: 0; padding-top: 0; }
+.doc h3 { margin: 1.3rem 0 .4rem; color: var(--ink-soft); }
+.doc p, .doc li { color: var(--ink-soft); }
+.doc strong { color: var(--ink); font-weight: 600; }
+
+.doc ul { margin: 0 0 .9rem; padding-left: 1.15rem; }
+.doc li { margin-bottom: .35rem; }
+
+.doc .summary {
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.2rem .5rem;
+  margin-bottom: 1.8rem;
+}
+.doc .summary p:last-child { margin-bottom: .75rem; }
+
+.doc .note {
+  background: var(--warn-soft);
+  border-left: 3px solid var(--warn);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: .85rem 1rem .1rem;
+  margin: 1.2rem 0;
+}
+.doc .note p { color: var(--ink); }
+
+.doc .table-wrap { overflow-x: auto; margin: 0 0 1.2rem; }
+.doc table { border-collapse: collapse; width: 100%; font-size: .93rem; min-width: 22rem; }
+.doc th, .doc td { text-align: left; vertical-align: top; padding: .6rem .7rem; border-bottom: 1px solid var(--rule); }
+.doc th { color: var(--ink); font-weight: 600; white-space: nowrap; }
+.doc td { color: var(--ink-soft); }
+
+.doc code {
+  background: var(--surface-2);
+  border-radius: 5px;
+  padding: .1rem .35rem;
+  font-size: .88em;
+  color: var(--ink);
+}
+
+.doc footer { margin-top: 2.4rem; padding-top: 1.1rem; border-top: 1px solid var(--rule); color: var(--ink-mute); font-size: .87rem; }
+.doc footer a { color: var(--accent); }
