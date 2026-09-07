@@ -25,7 +25,8 @@
   <div class="summary">
     <h3>Tóm lại</h3>
     <ul>
-      <li>Chúng tôi lưu số điện thoại của bạn để đăng nhập, cùng với mục tiêu calo, món bạn không ăn được và nhật ký bữa ăn.</li>
+      <li>Bạn có thể <strong>dùng thử mà không cần cho chúng tôi biết gì cả</strong> — không email, không số điện thoại.</li>
+      <li>Nếu bạn tạo tài khoản, chúng tôi lưu email và mật khẩu đã được mã hoá một chiều, cùng với mục tiêu calo, món bạn không ăn được và nhật ký bữa ăn.</li>
       <li><strong>Phần bạn viết về sức khỏe không được lưu.</strong> Nó chỉ được đọc một lần để kiểm tra an toàn rồi bỏ đi.</li>
       <li>Chúng tôi <strong>không bán</strong> dữ liệu, <strong>không quảng cáo</strong> và <strong>không theo dõi</strong> bạn giữa các ứng dụng khác.</li>
       <li>Bạn có thể tải về toàn bộ dữ liệu hoặc xoá vĩnh viễn ngay trong ứng dụng, bất cứ lúc nào.</li>
@@ -43,9 +44,19 @@
     </thead>
     <tbody>
       <tr>
-        <td>Số điện thoại</td>
-        <td>Gửi mã 6 số để đăng nhập và nhận lại đúng tài khoản của bạn</td>
-        <td>Có, đến khi bạn xoá tài khoản</td>
+        <td>Email</td>
+        <td>Nhận lại đúng tài khoản của bạn khi đăng nhập lại</td>
+        <td>Có, đến khi bạn xoá tài khoản. Không bắt buộc — xem mục dưới</td>
+      </tr>
+      <tr>
+        <td>Mật khẩu</td>
+        <td>Xác minh rằng đúng bạn đang đăng nhập</td>
+        <td>Chỉ lưu bản mã hoá một chiều (PBKDF2-SHA256), không lưu mật khẩu gốc</td>
+      </tr>
+      <tr>
+        <td><strong>Dùng thử (không tài khoản)</strong></td>
+        <td>Dùng app ngay mà không phải khai gì</td>
+        <td><strong>Không có email, không có mật khẩu.</strong> Chỉ có một mã tài khoản ngẫu nhiên nằm trên máy bạn</td>
       </tr>
       <tr>
         <td>Mục tiêu calo mỗi ngày</td>
@@ -86,7 +97,7 @@
   </table>
   </div>
 
-  <p>Chúng tôi <strong>không</strong> thu thập: tên, email, ngày sinh, địa chỉ, danh bạ, vị trí GPS, ảnh, số nhận dạng quảng cáo, hay dữ liệu từ Health Connect / Apple Health. Ứng dụng Android chỉ xin duy nhất quyền <code>INTERNET</code>.</p>
+  <p>Chúng tôi <strong>không</strong> thu thập: tên, số điện thoại, ngày sinh, địa chỉ, danh bạ, vị trí GPS, ảnh, số nhận dạng quảng cáo, hay dữ liệu từ Health Connect / Apple Health. Ứng dụng Android chỉ xin duy nhất quyền <code>INTERNET</code>.</p>
 
   <h2>2. Thông tin sức khỏe được xử lý ra sao</h2>
 
@@ -110,7 +121,7 @@
     <tbody>
       <tr>
         <td>Anthropic<br>(mô hình <code>claude-haiku-4-5</code>)</td>
-        <td>Tên món, khoảng calo mục tiêu, món bạn không ăn được, khẩu phần thường dùng, số người nấu cho.<br><strong>Không</strong> gồm số điện thoại, danh tính, hay phần bạn viết về sức khỏe.</td>
+        <td>Tên món, khoảng calo mục tiêu, món bạn không ăn được, khẩu phần thường dùng, số người nấu cho.<br><strong>Không</strong> gồm email, danh tính, hay phần bạn viết về sức khỏe.</td>
         <td>Soạn hướng dẫn điều chỉnh món</td>
       </tr>
       <tr>
@@ -159,10 +170,11 @@
   <ul>
     <li>Mọi kết nối giữa ứng dụng và máy chủ đều qua HTTPS.</li>
     <li>Mã đăng nhập của bạn được giữ trong vùng lưu trữ an toàn của hệ điều hành — Keychain trên iOS, EncryptedSharedPreferences trên Android.</li>
+    <li>Mật khẩu chỉ được lưu dưới dạng băm PBKDF2-HMAC-SHA256 có muối riêng cho từng tài khoản. Chúng tôi không lưu và không đọc được mật khẩu gốc của bạn.</li>
     <li>Cơ sở dữ liệu không cho máy khách truy cập trực tiếp; chỉ máy chủ đọc và ghi.</li>
   </ul>
 
-  <p>Không có hệ thống nào an toàn tuyệt đối. Nếu xảy ra sự cố ảnh hưởng tới dữ liệu của bạn, chúng tôi sẽ thông báo qua số điện thoại bạn đã dùng để đăng nhập.</p>
+  <p>Không có hệ thống nào an toàn tuyệt đối. Nếu xảy ra sự cố ảnh hưởng tới dữ liệu của bạn, chúng tôi sẽ thông báo qua email bạn đã dùng để đăng nhập. Nếu bạn đang dùng thử mà không có tài khoản, chúng tôi không có cách nào liên hệ với bạn — đó là mặt trái của việc không phải khai gì.</p>
 
   <h2>8. Trẻ em</h2>
 
